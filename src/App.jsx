@@ -10,7 +10,6 @@ function App() {
   const [passwordValid, setPasswordValid] = useState(null);
   const [confirmPasswordValid, setConfirmPasswordValid] = useState(null);
 
-  // Email validation regex
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
@@ -26,7 +25,7 @@ function App() {
     const value = e.target.value;
     setPassword(value);
     setPasswordValid(value.length >= 8);
-    setConfirmPasswordValid(value === confirmPassword); // re-check confirm password
+    setConfirmPasswordValid(value === confirmPassword); 
   };
 
   const handleConfirmPasswordChange = (e) => {
@@ -72,6 +71,7 @@ function App() {
         marginTop: '50px',
       }}
     >
+      <h1>Somnath's React Form</h1>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <label>Email:</label>
         <input
